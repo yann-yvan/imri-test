@@ -1,24 +1,87 @@
-# Lumen PHP Framework
+# Imri Test
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+A local company is involved in the sale and manufacture of transport equipment.
+The company wishes to know in a simple and fast way if a product X can be manufactured and which are the various elements entering in its manufacture.
+A product can be part of the manufacturing of one or more other products. A product is characterized by its identifier, its name and its quantity.
+A product that can be manufactured is that one so all its dependent products have each a quantity strictly greater than 0.
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+## Step
+1. Setup
+2. Launch
+3. Enjoy
 
-## Official Documentation
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+## setup
+### Step 1 :
+#### Clone project in your computer
+```
+git clone https://github.com/yann-yvan/imri-test
+```
 
-## Contributing
+### Step 2:
+#### install all dependencies from composer
+```shell script
+composer install
+```
+### Step 3:
+#### Create database
+```sql
+CREATE SCHEMA IF NOT EXISTS `test_product_db` DEFAULT CHARACTER SET utf8 ;
+```
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Step 4: Create .env file in projet root
 
-## Security Vulnerabilities
+##### On Linux base system
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+```shell script
+cp .env.example .env
+```
 
-## License
+##### On Windows base system
+```shell script
+copy .env.example .env
+```
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+##### Or create a file name .env and paste the above text
+```dotenv
+  APP_NAME="Imri Test"
+  APP_ENV=local
+  APP_KEY=base64:q2FGYvLk5IYGRbjQPCBN8AtvdoWybtBEYEGatGbvA/Q=
+  APP_DEBUG=true
+  APP_URL=http://localhost:8000
+  APP_TIMEZONE=UTC
+  
+  LOG_CHANNEL=stack
+  LOG_SLACK_WEBHOOK_URL=
+  
+  DB_CONNECTION=mysql
+  DB_HOST=127.0.0.1
+  DB_PORT=3306
+  DB_DATABASE=test_product_db
+  DB_USERNAME=root
+  DB_PASSWORD=root
+  
+  CACHE_DRIVER=file
+  QUEUE_CONNECTION=sync
+```
+
+### grant permission to storage dir
+
+##### On Linux base system
+
+```shell script
+sudo chmod -R a+rw storage/
+```
+
+
+## Launch app
+Run this in CLI
+```shell script
+php -S 127.0.0.1:8000 -t public 
+ ```
+Open your browser
+```
+http://localhost:8000
+```    
+
+## Have fun and test
