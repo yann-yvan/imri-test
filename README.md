@@ -24,7 +24,7 @@ git clone https://github.com/yann-yvan/imri-test
 composer install
 ```
 ### Step 3:
-#### Create database
+#### Create a database on MySQL
 ```sql
 CREATE SCHEMA IF NOT EXISTS `test_product_db` DEFAULT CHARACTER SET utf8 ;
 ```

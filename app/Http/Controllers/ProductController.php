@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Exceptions\LiteResponseException;
 use App\Models\BaseModel;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -120,10 +121,10 @@ class ProductController extends CoreController
     public function specificSearchCriteria($query, $request)
     {
         //In case the product is search by his id
-//        if ($request->has("id")) {
-//            $query->where("id", $request->id);
-//            throw new LiteResponseException(config("code.request.SUCCESS"),"",$query->first());
-//        }
+        if ($request->has("id")) {
+            $query->where("id", $request->id);
+            throw new LiteResponseException(config("code.request.SUCCESS"),"",$query->first());
+        }
     }
 
     /**
