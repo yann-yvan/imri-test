@@ -1,0 +1,335 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Lumen base App Documentation | Power By N-Y Corp",
+        "description": "Lumen base App Documentation | Power By N-Y Corp",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "email": "yann.ngalle@outlook.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/component/add": {
+            "post": {
+                "tags": [
+                    "Components"
+                ],
+                "summary": "Create a new component",
+                "description": "To create a product we may be need component to get it ready",
+                "operationId": "addComponent",
+                "parameters": [
+                    {
+                        "name": "product_id",
+                        "in": "query",
+                        "description": "The id of the product",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "component_id",
+                        "in": "query",
+                        "description": "The id of the component required to build the product",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/component/update": {
+            "post": {
+                "tags": [
+                    "Components"
+                ],
+                "summary": "Update and existing component",
+                "description": "Update a component by his id",
+                "operationId": "updateComponent",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "The id of the component to update",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "product_id",
+                        "in": "query",
+                        "description": "The id of the product",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "component_id",
+                        "in": "query",
+                        "description": "The id of the component required to build the product",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/component/delete": {
+            "post": {
+                "tags": [
+                    "Components"
+                ],
+                "summary": "Delete and existing component",
+                "description": "Delete a component by his id",
+                "operationId": "deleteComponent",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "The id of the component to delete",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/component/restore": {
+            "post": {
+                "tags": [
+                    "Components"
+                ],
+                "summary": "Restore a deleted component",
+                "description": "Restore a component by his id",
+                "operationId": "restoreComponent",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "The id of the component to restore",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/product/add": {
+            "post": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Create a new product",
+                "description": "Register a new product",
+                "operationId": "addProduct",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "The name of the product max:100",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "quantity",
+                        "in": "query",
+                        "description": "the number of available product",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/product/search": {
+            "post": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Search products",
+                "description": "List a product by name, id",
+                "operationId": "searchProduct",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "The id of the product needed",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "The name of the product you need",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/product/update": {
+            "post": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Update and existing product",
+                "description": "Update a product by his id",
+                "operationId": "updateProduct",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "The id of the product to update",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "The name of the product max:100",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "quantity",
+                        "in": "query",
+                        "description": "the number of available product",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/product/delete": {
+            "post": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Delete and existing product",
+                "description": "Delete a product by his id",
+                "operationId": "deleteProduct",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "The id of the product to delete",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/product/restore": {
+            "post": {
+                "tags": [
+                    "Products"
+                ],
+                "summary": "Restore a deleted product",
+                "description": "Restore a product by his id",
+                "operationId": "restoreProduct",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "The id of the product to restore",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "Bearer": {
+                "type": "apiKey",
+                "description": "User token example Bearer <token-value>",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Response code",
+            "description": "\n     *     'TOKEN_EXPIRED' => 1, 'BLACK_LISTED_TOKEN' => 2, 'INVALID_TOKEN' => 3, 'NO_TOKEN' => 4,\n     *     'USER_NOT_FOUND' => 5,\n     *     'WRONG_JSON_FORMAT' => 6,\n     *     'SUCCESS' => 1000, 'FAILURE' => 1001, 'VALIDATION_ERROR' => 1002, 'EXPIRED' => 1003, 'DATA_EXIST' => 1004,\n     *     'NOT_AUTHORIZED' => 1005,\n     *     'ACCOUNT_NOT_VERIFY' => 1100,'WRONG_USERNAME' => 1101,'WRONG_PASSWORD' => 1102,'WRONG_CREDENTIALS' => 1103,\n     *     'ACCOUNT_VERIFIED' => 1104,'NOT_EXISTS' => 1105"
+        }
+    ],
+    "externalDocs": {
+        "description": "Find out more about Swagger",
+        "url": "http://swagger.io"
+    }
+}
