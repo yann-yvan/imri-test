@@ -73,6 +73,10 @@ The content to copy
   CACHE_DRIVER=file
   QUEUE_CONNECTION=sync
 ```
+Install the database
+```shell script
+php artisan migrate:fresh
+```
 
 ### grant permission to storage dir
 
