@@ -27,9 +27,12 @@ class Controller extends BaseController
 
     /**
      * @OA\Info(
-     *     description="Lumen base App Documentation | Power By N-Y Corp",
+     *     description="A local company is involved in the sale and manufacture of transport equipment.
+    The company wishes to know in a simple and fast way if a product X can be manufactured and which are the various elements entering in its manufacture.
+    A product can be part of the manufacturing of one or more other products. A product is characterized by its identifier, its name and its quantity.
+    A product that can be manufactured is that one so all its dependent products have each a quantity strictly greater than 0.",
      *     version="1.0.0",
-     *     title="Lumen base App Documentation | Power By N-Y Corp",
+     *     title="Imri Test App Documentation | Power By Yann Yvan",
      *     termsOfService="http://swagger.io/terms/",
      *     @OA\Contact(
      *         email="yann.ngalle@outlook.com"
@@ -69,7 +72,6 @@ class Controller extends BaseController
      * )
      */
     const ROOT_DIRECTORY = "upload";
-    const DRUG_DIRECTORY = "drugs";
 
     /**
      * Store a newly created resource in storage.

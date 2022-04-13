@@ -1,8 +1,8 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "Lumen base App Documentation | Power By N-Y Corp",
-        "description": "Lumen base App Documentation | Power By N-Y Corp",
+        "title": "Imri Test App Documentation | Power By Yann Yvan",
+        "description": "A local company is involved in the sale and manufacture of transport equipment.\n    The company wishes to know in a simple and fast way if a product X can be manufactured and which are the various elements entering in its manufacture.\n    A product can be part of the manufacturing of one or more other products. A product is characterized by its identifier, its name and its quantity.\n    A product that can be manufactured is that one so all its dependent products have each a quantity strictly greater than 0.",
         "termsOfService": "http://swagger.io/terms/",
         "contact": {
             "email": "yann.ngalle@outlook.com"
