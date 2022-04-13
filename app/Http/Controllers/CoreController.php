@@ -193,7 +193,7 @@ abstract class CoreController extends Controller
                 array_push($keywords, $value);
             }
         }
-        $query->search(join(" ", $keywords), null, $inclusive);
+        $query->search(join(" ", $keywords));
     }
 
     /**
