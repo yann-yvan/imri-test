@@ -51,6 +51,7 @@ Replace theses value with your database credential
   DB_PASSWORD=password
 ```
 
+The content to copy
 ```dotenv
   APP_NAME="Imri Test"
   APP_ENV=local
