@@ -11,7 +11,7 @@ A product that can be manufactured is that one so all its dependent products hav
 3. Enjoy
 
 
-## setup
+## 1- Setup
 ### Step 1 :
 #### Clone project in your computer
 ```
@@ -83,8 +83,8 @@ sudo chmod -R a+rw storage/
 ```
 
 
-## Launch app
-Run this in CLI
+## 2- Launch app
+Run this in terminal
 ```shell script
 php -S 127.0.0.1:8000 -t public 
  ```
@@ -93,4 +93,4 @@ Open your browser
 http://localhost:8000
 ```    
 
-## Have fun and test
+## 3- Test and enjoy
