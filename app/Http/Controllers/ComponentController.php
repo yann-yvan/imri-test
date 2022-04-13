@@ -54,7 +54,7 @@ class ComponentController extends CoreController
      *     name="product_id",
      *     required=true,
      *     in="query",
-     *     description="The id of the product",
+     *     description="The id of the product we want to assign component",
      *     @OA\Schema(
      *         type="integer"
      *     )
@@ -63,7 +63,7 @@ class ComponentController extends CoreController
      *     name="component_id",
      *     required=true,
      *     in="query",
-     *     description="The id of the component required to build the product",
+     *     description="The id of the product required to build this product",
      *     @OA\Schema(
      *         type="integer"
      *     )
