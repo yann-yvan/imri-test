@@ -43,6 +43,14 @@ copy .env.example .env
 ```
 
 ##### Or create a file name .env and paste the above text
+Replace theses value with your database credential
+
+
+```dotenv
+  DB_USERNAME=username
+  DB_PASSWORD=password
+```
+
 ```dotenv
   APP_NAME="Imri Test"
   APP_ENV=local
@@ -58,8 +66,8 @@ copy .env.example .env
   DB_HOST=127.0.0.1
   DB_PORT=3306
   DB_DATABASE=test_product_db
-  DB_USERNAME=root
-  DB_PASSWORD=root
+  DB_USERNAME=
+  DB_PASSWORD=
   
   CACHE_DRIVER=file
   QUEUE_CONNECTION=sync
